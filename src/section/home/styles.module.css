@@ -1,0 +1,8 @@
+.title {
+  @apply text-wine400 text-4xl font-bold mt-8;
+}
+
+.subtitle {
+  @apply text-sm text-wine400 font-normal mt-4 max-w-[235px];
+}
+

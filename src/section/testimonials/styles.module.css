@@ -1,0 +1,19 @@
+.title {
+  @apply text-gold text-4xl font-bold text-center mt-8 pb-2;
+}
+
+.box {
+  @apply border-dashed border-2 border-wine100 p-4 rounded-lg mt-4;
+}
+
+.box_text {
+  @apply text-sm font-normal text-justify text-gold;
+}
+
+.box_name {
+  @apply text-sm font-normal mt-6 text-right text-gold mr-6;
+}
+
+.profile {
+  @apply rounded-full border-2 border-gold bg-cover h-9;
+}
