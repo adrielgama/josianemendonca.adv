@@ -16,11 +16,13 @@ export const Navbar = () => {
     <div className="shadow-lg drop-shadow-lg w-full fixed top-0 left-0 z-50">
       <div className="md:flex items-center justify-between bg-wine600 py-1 md:px-10 px-7">
         <div className="cursor-pointer flex items-center">
-          <img
-            src={Logo}
-            className="h-20 md:h-28"
-            alt="Josiane Mendonça Logo"
-          />
+          <a href="#">
+            <img
+              src={Logo}
+              className="h-20 md:h-28"
+              alt="Josiane Mendonça Logo"
+            />
+          </a>
         </div>
 
         <div
@@ -69,6 +71,25 @@ export const Navbar = () => {
               </a>
             </li>
           ))}
+          <div className="md:hidden pb-2">
+            <p className="text-center text-wine100/90 text-xs pt-6">
+              Todos os direitos reservados © Josiane de Sena Mendonça OAB/BA :
+              65347
+            </p>
+
+            <p className="text-center text-wine100/90 text-[10px] pt-1">
+              Desenvolvido por
+              <a
+                href="https://adrielgama.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gold"
+              >
+                {" "}
+                adrielgama.dev
+              </a>
+            </p>
+          </div>
         </ul>
       </div>
     </div>

@@ -11,8 +11,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-// import { Button } from "@/components/Button/button";
-import { toast } from "@/components/ui/use-toast";
+import { Toaster } from "@/components/ui/toaster";
+import { useToast } from "@/components/ui/use-toast";
 import { ToastAction } from "@/components/ui/toast";
 import { Textarea } from "@/components/ui/textarea";
 import { RiArrowRightSLine } from "react-icons/ri";
@@ -25,6 +25,11 @@ const templateId = import.meta.env.VITE_TEMPLATEID as string;
 
 export const Form = () => {
   const [phoneNumber, setPhoneNumber] = React.useState("");
+  const [emailValue, setEmailValue] = React.useState("");
+  const [nameValue, setNameValue] = React.useState("");
+
+  const { toast } = useToast();
+
   const form = useForm<ProfileFormValues>({
     resolver: zodResolver(formSchema),
     mode: "onChange",
@@ -39,7 +44,7 @@ export const Form = () => {
       const template_params = {
         name: name,
         email: email,
-        tel: phone,
+        phone: phone,
         message: message ?? "",
       };
 
@@ -49,13 +54,18 @@ export const Form = () => {
         variant: "destructive",
         title: "Encontramos um problema.",
         description: `Entre em contato com o admin e informe o erro: ${error}`,
-        action: <ToastAction altText="Try again">Try again</ToastAction>,
+        duration: 5000,
+        className: "bg-red-400 text-white",
+        action: <ToastAction altText="fechar alerta">Fechar</ToastAction>,
       });
     } finally {
       toast({
-        variant: "destructive",
+        variant: "default",
         title: "Enviado com sucesso",
         description: "Logo entraremos em contato.",
+        duration: 5000,
+        className: "bg-white",
+        action: <ToastAction altText="fechar alerta">Fechar</ToastAction>,
       });
     }
   }
@@ -76,8 +86,21 @@ export const Form = () => {
     form.setValue("phone", numericValue ? numericValue[0] : "");
   };
 
+  const handleChangeEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const inputValue = event.target.value;
+    setEmailValue(inputValue);
+    form.setValue("email", inputValue ? inputValue : "");
+  };
+
+  const handleChangeName = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const inputValue = event.target.value;
+    setNameValue(inputValue);
+    form.setValue("name", inputValue ? inputValue : "");
+  };
+
   return (
     <FormComponent {...form}>
+      <Toaster />
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2 mt-6">
         <FormField
           control={form.control}
@@ -87,9 +110,11 @@ export const Form = () => {
               <FormLabel className="text-gold">Nome</FormLabel>
               <FormControl>
                 <Input
+                  {...field}
                   className="border-gold/20"
                   placeholder="Nome"
-                  {...field}
+                  value={nameValue}
+                  onChange={handleChangeName}
                 />
               </FormControl>
               <FormMessage />
@@ -104,9 +129,11 @@ export const Form = () => {
               <FormLabel className="text-gold">E-mail</FormLabel>
               <FormControl>
                 <Input
+                  {...field}
                   className="border-gold/20"
                   placeholder="exemplo@exemplo.com"
-                  {...field}
+                  value={emailValue}
+                  onChange={handleChangeEmail}
                 />
               </FormControl>
               <FormMessage />
