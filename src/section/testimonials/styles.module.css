@@ -11,6 +11,6 @@
 }
 
 .box_name {
-  @apply text-sm font-normal mt-6 text-right text-gold mr-6;
+  @apply text-sm font-normal mt-6 text-right text-gold-gradient mr-6;
 }
 
