@@ -13,7 +13,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <div className="shadow-lg drop-shadow-lg w-full fixed top-0 left-0">
+    <div className="shadow-lg drop-shadow-lg w-full fixed top-0 left-0 z-50">
       <div className="md:flex items-center justify-between bg-wine600 py-1 md:px-10 px-7">
         <div className="cursor-pointer flex items-center">
           <img

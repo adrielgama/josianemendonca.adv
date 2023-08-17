@@ -27,7 +27,7 @@ module.exports = {
         wine400: "#3D051C",
         wine100: "#9F6177",
         gold: "#B29557",
-        "gold-gradient": "#5F4D28",
+        "gold-gradient": "#967B41 ",
         "gray-light": "#d3dce6",
       },
       keyframes: {
