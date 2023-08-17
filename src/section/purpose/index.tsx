@@ -4,7 +4,10 @@ import styles from "./styles.module.css";
 
 export const Purpose = () => {
   return (
-    <div id="purpose" className="container p-4 flex flex-col items-center">
+    <div
+      id="purpose"
+      className="container p-4 flex flex-col items-center py-20"
+    >
       <h1 className={styles.title}>O propósito</h1>
       <p className={styles.subtitle}>
         Proporcionamos uma representação jurídica personalizada para cada

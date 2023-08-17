@@ -13,7 +13,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <div className="shadow-md w-full fixed top-0 left-0">
+    <div className="shadow-lg drop-shadow-lg w-full fixed top-0 left-0">
       <div className="md:flex items-center justify-between bg-wine600 py-1 md:px-10 px-7">
         <div className="cursor-pointer flex items-center">
           <img
@@ -44,9 +44,9 @@ export const Navbar = () => {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M1 1h15M1 7h15M1 13h15"
               />
             </svg>
@@ -54,7 +54,7 @@ export const Navbar = () => {
         </div>
 
         <ul
-          className={`bg-wine600 shadow-md md:flex md:items-center md:pb-0 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
+          className={`bg-wine600 drop-shadow-lg shadow-lg md:flex md:items-center md:pb-0 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
             open ? "top-20 " : "top-[-490px]"
           }`}
         >
