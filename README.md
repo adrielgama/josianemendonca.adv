@@ -1,27 +1,35 @@
-# React + TypeScript + Vite
+<center>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Logo](https://raw.githubusercontent.com/adrielgama/link-images/main/Capa.png?token=GHSAT0AAAAAACF3GWKBMXOTDRYDGQLNCMLEZHBC4SQ)
 
-Currently, two official plugins are available:
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-red.svg)](https://opensource.org/licenses/)
+[![AdrielGama](https://img.shields.io/badge/Developer-adrielgama-green.svg)](http://www.adrielgama.dev/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+</center>
 
-## Expanding the ESLint configuration
+# Josiane Mendonça | Advocacia
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Essa landing page foi projetada para fornecer uma visão clara e atraente dos serviços legais que o escritório oferece aos seus clientes.
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Screenshots
+
+![Desktop](https://raw.githubusercontent.com/adrielgama/link-images/main/MockupDesktop.jpg?token=GHSAT0AAAAAACF3GWKBJU6ANFH5TNOXQUM2ZHBC2HQ)
+
+![Mobile](https://raw.githubusercontent.com/adrielgama/link-images/main/MockupPhone.jpg?token=GHSAT0AAAAAACF3GWKBVOTAQB35OAT3P5DGZHBC3CQ)
+
+
+## Autores
+
+- [Adriel Gama](https://www.github.com/adrielgama)
+
+
+## Licença
+
+[GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
+
+
+## Projeto
+
+[![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/file/7khBS97zLX8Gmq8qEEnojA/Josiane-Mendon%C3%A7a---Landing-Page?type=design&node-id=0-1&mode=design)
