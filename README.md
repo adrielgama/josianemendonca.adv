@@ -1,8 +1,8 @@
 <center>
 
-![Logo](https://raw.githubusercontent.com/adrielgama/link-images/main/Capa.png?token=GHSAT0AAAAAACF3GWKBMXOTDRYDGQLNCMLEZHBC4SQ)
+![Logo](https://i.imgur.com/dB0bbtp.png)
 
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-red.svg)](https://opensource.org/licenses/)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![AdrielGama](https://img.shields.io/badge/Developer-adrielgama-green.svg)](http://www.adrielgama.dev/)
 
 </center>
@@ -15,9 +15,9 @@ Essa landing page foi projetada para fornecer uma visão clara e atraente dos se
 
 ## Screenshots
 
-![Desktop](https://raw.githubusercontent.com/adrielgama/link-images/main/MockupDesktop.jpg?token=GHSAT0AAAAAACF3GWKBJU6ANFH5TNOXQUM2ZHBC2HQ)
+![Desktop](https://i.imgur.com/MzTJjhB.jpg)
 
-![Mobile](https://raw.githubusercontent.com/adrielgama/link-images/main/MockupPhone.jpg?token=GHSAT0AAAAAACF3GWKBVOTAQB35OAT3P5DGZHBC3CQ)
+![Mobile](https://i.imgur.com/f7UsrO9.jpg)
 
 
 ## Autores
