@@ -1,7 +1,10 @@
-import React from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import emailjs from "@emailjs/browser";
+import React from 'react'
+
+import emailjs from '@emailjs/browser'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useForm } from 'react-hook-form'
+import { RiArrowRightSLine } from 'react-icons/ri'
+
 import {
   Form as FormComponent,
   FormControl,
@@ -9,94 +12,94 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Toaster } from "@/components/ui/toaster";
-import { useToast } from "@/components/ui/use-toast";
-import { ToastAction } from "@/components/ui/toast";
-import { Textarea } from "@/components/ui/textarea";
-import { RiArrowRightSLine } from "react-icons/ri";
+} from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { ToastAction } from '@/components/ui/toast'
+import { Toaster } from '@/components/ui/toaster'
+import { useToast } from '@/components/ui/use-toast'
 
-import { ProfileFormValues, formSchema } from "./schema";
+import { ProfileFormValues, formSchema } from './schema'
 
-const userId = import.meta.env.VITE_USERID as string;
-const serviceId = import.meta.env.VITE_SERVICEID as string;
-const templateId = import.meta.env.VITE_TEMPLATEID as string;
+const userId = import.meta.env.VITE_USERID as string
+const serviceId = import.meta.env.VITE_SERVICEID as string
+const templateId = import.meta.env.VITE_TEMPLATEID as string
 
 export const Form = () => {
-  const [phoneNumber, setPhoneNumber] = React.useState("");
-  const [emailValue, setEmailValue] = React.useState("");
-  const [nameValue, setNameValue] = React.useState("");
+  const [phoneNumber, setPhoneNumber] = React.useState('')
+  const [emailValue, setEmailValue] = React.useState('')
+  const [nameValue, setNameValue] = React.useState('')
 
-  const { toast } = useToast();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const { toast }: any = useToast()
 
   const form = useForm<ProfileFormValues>({
     resolver: zodResolver(formSchema),
-    mode: "onChange",
-  });
+    mode: 'onChange',
+  })
 
-  const numberFormat = (value: string) => value.match(/\(\d{2}\) \d{5}-\d{4}/g);
+  const numberFormat = (value: string) => value.match(/\(\d{2}\) \d{5}-\d{4}/g)
 
-  emailjs.init(userId);
+  emailjs.init(userId)
 
   async function onSubmit({ name, email, phone, message }: ProfileFormValues) {
     try {
-      const template_params = {
-        name: name,
-        email: email,
-        phone: phone,
-        message: message ?? "",
-      };
+      const templateParams = {
+        name,
+        email,
+        phone,
+        message: message ?? '',
+      }
 
-      await emailjs.send(serviceId, templateId, template_params, userId);
+      await emailjs.send(serviceId, templateId, templateParams, userId)
     } catch (error) {
       toast({
-        variant: "destructive",
-        title: "Encontramos um problema.",
+        variant: 'destructive',
+        title: 'Encontramos um problema.',
         description: `Entre em contato com o admin e informe o erro: ${error}`,
         duration: 5000,
-        className: "bg-red-400 text-white",
+        className: 'bg-red-400 text-white',
         action: <ToastAction altText="fechar alerta">Fechar</ToastAction>,
-      });
+      })
     } finally {
       toast({
-        variant: "default",
-        title: "Enviado com sucesso",
-        description: "Logo entraremos em contato.",
+        variant: 'default',
+        title: 'Enviado com sucesso',
+        description: 'Logo entraremos em contato.',
         duration: 5000,
-        className: "bg-white",
+        className: 'bg-white',
         action: <ToastAction altText="fechar alerta">Fechar</ToastAction>,
-      });
+      })
     }
   }
 
   const handleChangePhoneNumber = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    const inputValue = event.target.value;
+    const inputValue = event.target.value
 
-    const formattedValue = inputValue.replace(/\D/g, "");
+    const formattedValue = inputValue.replace(/\D/g, '')
     const formattedPhoneNumber = `(${formattedValue.slice(
       0,
       2
-    )}) ${formattedValue.slice(2, 7)}-${formattedValue.slice(7, 11)}`;
-    setPhoneNumber(formattedPhoneNumber);
+    )}) ${formattedValue.slice(2, 7)}-${formattedValue.slice(7, 11)}`
+    setPhoneNumber(formattedPhoneNumber)
 
-    const numericValue = numberFormat(inputValue);
-    form.setValue("phone", numericValue ? numericValue[0] : "");
-  };
+    const numericValue = numberFormat(inputValue)
+    form.setValue('phone', numericValue ? numericValue[0] : '')
+  }
 
   const handleChangeEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const inputValue = event.target.value;
-    setEmailValue(inputValue);
-    form.setValue("email", inputValue ? inputValue : "");
-  };
+    const inputValue = event.target.value
+    setEmailValue(inputValue)
+    form.setValue('email', inputValue || '')
+  }
 
   const handleChangeName = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const inputValue = event.target.value;
-    setNameValue(inputValue);
-    form.setValue("name", inputValue ? inputValue : "");
-  };
+    const inputValue = event.target.value
+    setNameValue(inputValue)
+    form.setValue('name', inputValue || '')
+  }
 
   return (
     <FormComponent {...form}>
@@ -190,5 +193,5 @@ export const Form = () => {
         </div>
       </form>
     </FormComponent>
-  );
-};
+  )
+}

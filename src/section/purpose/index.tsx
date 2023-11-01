@@ -1,7 +1,10 @@
-import React from "react";
-import { Slide } from "react-awesome-reveal";
-import { Button } from "@/components/Button/button";
-import styles from "./styles.module.css";
+import React from 'react'
+
+import { Slide } from 'react-awesome-reveal'
+
+import { Button } from '@/components/Button/button'
+
+import styles from './styles.module.css'
 
 export const Purpose = () => {
   return (
@@ -20,8 +23,8 @@ export const Purpose = () => {
           nosso compromisso é assegurar que seus direitos sejam protegidos,
           proporcionando a assistência legal competente e ética que você merece.
         </p>
-        <Button text="Entrar em contato" />
+        <Button />
       </Slide>
     </div>
-  );
-};
+  )
+}

@@ -1,26 +1,11 @@
-import React from "react";
-import { RiArrowRightSLine } from "react-icons/ri";
+import React from 'react'
 
-interface ButtonProps {
-  text: string;
-  hasArrow?: boolean;
+import { Button as BtnComponent } from '../ui/button'
+
+export const Button = () => {
+  return (
+    <BtnComponent className="bg-gradient-to-r from-wine400 to-wine600 mt-4 rounded-full text-center text-white p-4 text-xs max-w-[170px]">
+      Entrar em contato
+    </BtnComponent>
+  )
 }
-
-export const Button: React.FC<ButtonProps> = ({ text, hasArrow }) => {
-  return hasArrow ? (
-    <a href="#contact">
-      <div className="bg-gradient-to-tr from-wine600 to-wine600 rounded-full text-center text-white py-1 px-2 text-xs mt-8 max-w-[170px] h-7 flex items-center justify-between">
-        <p>{text}</p>
-        <div className="text-wine600 bg-gray-light rounded-full">
-          <RiArrowRightSLine size={20} />
-        </div>
-      </div>
-    </a>
-  ) : (
-    <a href="#contact">
-      <div className="bg-gradient-to-tr from-wine600 to-wine600 rounded-full text-center text-white py-1 px-2 text-xs mt-8 max-w-[170px] h-7 flex items-center justify-center">
-        <p>{text}</p>
-      </div>
-    </a>
-  );
-};

@@ -14,3 +14,15 @@
   @apply text-sm font-normal mt-6 text-right text-gold-gradient mr-6;
 }
 
+.containerWithBg::before {
+  content: '';
+  background-image: url('@/assets/logo_short.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.05;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}

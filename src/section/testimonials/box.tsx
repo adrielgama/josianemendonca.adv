@@ -1,17 +1,20 @@
-import React from "react";
-import Reveal, { Fade, Slide } from "react-awesome-reveal";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import styles from "./styles.module.css";
+import React from 'react'
+
+import Reveal, { Fade, Slide } from 'react-awesome-reveal'
+
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+
+import styles from './styles.module.css'
 
 interface BoxProps {
-  image: string;
-  name: string;
-  testimonial: string;
+  image: string
+  name: string
+  testimonial: string
 }
 
 export const Box: React.FC<BoxProps> = ({ image, name, testimonial }) => {
   return (
-    <div>
+    <div className="max-w-xs ">
       <Reveal triggerOnce cascade>
         <div className={styles.box}>
           <Slide triggerOnce>
@@ -22,12 +25,12 @@ export const Box: React.FC<BoxProps> = ({ image, name, testimonial }) => {
           </Reveal>
         </div>
         <Fade triggerOnce>
-          <Avatar className="relative left-[84vw] bottom-6 border-2 border-wine100">
+          <Avatar className="relative left-[70vw] bottom-6 border-2 border-wine100">
             <AvatarImage src={image} alt={`${name}- Profile Foto`} />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
         </Fade>
       </Reveal>
     </div>
-  );
-};
+  )
+}

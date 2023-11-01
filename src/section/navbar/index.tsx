@@ -1,16 +1,10 @@
-import { useState } from "react";
+import { useState } from 'react'
 
-import Logo from "@/assets/logo.png";
+import Logo from '@/assets/logo.svg'
+import { LinksMock } from '@/mock/links'
 
 export const Navbar = () => {
-  const [open, setOpen] = useState(false);
-
-  const Links = [
-    { name: "Início", link: "#" },
-    { name: "Propósito", link: "#purpose" },
-    { name: "Depoimentos", link: "#testimonials" },
-    { name: "Contato", link: "#contact" },
-  ];
+  const [open, setOpen] = useState(false)
 
   return (
     <div className="shadow-lg drop-shadow-lg w-full fixed top-0 left-0 z-50">
@@ -57,10 +51,10 @@ export const Navbar = () => {
 
         <ul
           className={`bg-wine600 drop-shadow-lg shadow-lg md:flex md:items-center md:pb-0 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
-            open ? "top-20 " : "top-[-490px]"
+            open ? 'top-20 ' : 'top-[-490px]'
           }`}
         >
-          {Links.map((link) => (
+          {LinksMock.map((link) => (
             <li key={link.name} className="md:ml-8 text-sm md:my-0 my-7">
               <a
                 href={link.link}
@@ -85,7 +79,7 @@ export const Navbar = () => {
                 rel="noopener noreferrer"
                 className="text-gold"
               >
-                {" "}
+                {' '}
                 adrielgama.dev
               </a>
             </p>
@@ -93,5 +87,5 @@ export const Navbar = () => {
         </ul>
       </div>
     </div>
-  );
-};
+  )
+}

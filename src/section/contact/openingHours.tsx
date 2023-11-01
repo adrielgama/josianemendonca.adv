@@ -1,7 +1,8 @@
-import React from "react";
-import QRCode from "@/assets/QR_code.svg";
+import React from 'react'
 
-import styles from "./styles.module.css";
+import QRCode from '@/assets/QR_code.svg'
+
+import styles from './styles.module.css'
 
 export const OpeningHours = () => {
   return (
@@ -39,5 +40,5 @@ export const OpeningHours = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

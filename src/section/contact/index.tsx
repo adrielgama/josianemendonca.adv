@@ -1,10 +1,10 @@
-import React from "react";
-import { Form } from "./form";
-import { OpeningHours } from "./openingHours";
+import React from 'react'
 
-import { Slide, Reveal } from "react-awesome-reveal";
+import { Slide, Reveal } from 'react-awesome-reveal'
 
-import styles from "./styles.module.css";
+import { Form } from './form'
+import { OpeningHours } from './openingHours'
+import styles from './styles.module.css'
 
 export const Contact = () => {
   return (
@@ -20,5 +20,5 @@ export const Contact = () => {
         </Slide>
       </Reveal>
     </div>
-  );
-};
+  )
+}
