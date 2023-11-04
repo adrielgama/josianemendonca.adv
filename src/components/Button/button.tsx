@@ -4,7 +4,7 @@ import { Button as BtnComponent } from '../ui/button'
 
 export const Button = () => {
   return (
-    <BtnComponent className="bg-gradient-to-r from-wine400 to-wine600 mt-4 rounded-full text-center text-white p-4 text-xs max-w-[170px]">
+    <BtnComponent className="mt-4 max-w-[170px] rounded-full bg-gradient-to-r from-wine400 to-wine600 p-4 text-center text-xs text-white">
       Entrar em contato
     </BtnComponent>
   )

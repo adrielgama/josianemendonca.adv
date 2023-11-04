@@ -6,7 +6,7 @@ import styles from './styles.module.css'
 
 export const OpeningHours = () => {
   return (
-    <div className="flex flex-col gap-4 mt-6 container">
+    <div className="container mt-6 flex flex-col gap-4">
       <h1 className={styles.title_h2}>Entre em contato a qualquer momento</h1>
       <div className="flex flex-col gap-10">
         <div>
@@ -24,7 +24,7 @@ export const OpeningHours = () => {
             josianemendonca.adv@gmail.com
           </a>
         </div>
-        <div className="flex flex-row justify-between items-center">
+        <div className="flex flex-row items-center justify-between">
           <div>
             <h2 className={styles.subtitle}>Celular / Whatsapp</h2>
             <a
