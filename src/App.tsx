@@ -1,3 +1,4 @@
+import { Blog } from './section/blog/index.jsx'
 import { Contact } from './section/contact/index.jsx'
 import { Home } from './section/home/index.jsx'
 import { Navbar } from './section/navbar/index.js'
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <Home />
       <Purpose />
+      <Blog />
       <Testimonials />
       <Contact />
     </main>

@@ -7,9 +7,9 @@ export const Navbar = () => {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="shadow-lg drop-shadow-lg w-full fixed top-0 left-0 z-50">
-      <div className="md:flex items-center justify-between bg-wine600 py-1 md:px-10 px-7">
-        <div className="cursor-pointer flex items-center">
+    <div className="fixed left-0 top-0 z-50 w-full shadow-lg drop-shadow-lg">
+      <div className="items-center justify-between bg-wine600 px-7 py-1 md:flex md:px-10">
+        <div className="flex cursor-pointer items-center">
           <a href="#">
             <img
               src={Logo}
@@ -21,18 +21,18 @@ export const Navbar = () => {
 
         <div
           onClick={() => setOpen(!open)}
-          className="absolute top-6 right-6 md:hidden"
+          className="absolute right-6 top-6 md:hidden"
         >
           <button
             data-collapse-toggle="navbar-sticky"
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gold rounded-lg md:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gold md:hidden"
             aria-controls="navbar-sticky"
             aria-expanded="false"
           >
             <span className="sr-only">Open main menu</span>
             <svg
-              className="w-8 h-8"
+              className="h-8 w-8"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -50,28 +50,28 @@ export const Navbar = () => {
         </div>
 
         <ul
-          className={`bg-wine600 drop-shadow-lg shadow-lg md:flex md:items-center md:pb-0 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
+          className={`absolute left-0 z-[-1] w-full bg-wine600 pl-9 shadow-lg drop-shadow-lg transition-all duration-500 ease-in md:static md:z-auto md:flex md:w-auto md:items-center md:pb-0 md:pl-0 ${
             open ? 'top-20 ' : 'top-[-490px]'
           }`}
         >
           {LinksMock.map((link) => (
-            <li key={link.name} className="md:ml-8 text-sm md:my-0 my-7">
+            <li key={link.name} className="my-7 text-sm md:my-0 md:ml-8">
               <a
                 href={link.link}
-                className="text-gold hover:text-white duration-300 font-medium md:font-normal"
+                className="font-medium text-gold duration-300 hover:text-white md:font-normal"
                 onClick={() => setOpen(false)}
               >
                 {link.name}
               </a>
             </li>
           ))}
-          <div className="md:hidden pb-2">
-            <p className="text-center text-wine100/90 text-xs pt-6">
+          <div className="pb-2 md:hidden">
+            <p className="pt-6 text-center text-xs text-wine100/90">
               Todos os direitos reservados © Josiane de Sena Mendonça OAB/BA :
               65347
             </p>
 
-            <p className="text-center text-wine100/90 text-[10px] pt-1">
+            <p className="pt-1 text-center text-[10px] text-wine100/90">
               Desenvolvido por
               <a
                 href="https://adrielgama.dev/"

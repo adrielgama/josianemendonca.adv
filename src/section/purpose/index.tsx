@@ -10,7 +10,7 @@ export const Purpose = () => {
   return (
     <div
       id="purpose"
-      className="container p-4 flex flex-col items-center py-20"
+      className="container flex flex-col items-center p-4 py-20 sm:container md:pt-28"
     >
       <Slide triggerOnce direction="right">
         <h1 className={styles.title}>O propósito</h1>

@@ -14,7 +14,7 @@ interface BoxProps {
 
 export const Box: React.FC<BoxProps> = ({ image, name, testimonial }) => {
   return (
-    <div className="max-w-xs ">
+    <div className="mb-8 max-w-xs">
       <Reveal triggerOnce cascade>
         <div className={styles.box}>
           <Slide triggerOnce>
@@ -25,7 +25,7 @@ export const Box: React.FC<BoxProps> = ({ image, name, testimonial }) => {
           </Reveal>
         </div>
         <Fade triggerOnce>
-          <Avatar className="relative left-[70vw] bottom-6 border-2 border-wine100">
+          <Avatar className="absolute -bottom-4 -right-4 border-2 border-wine100">
             <AvatarImage src={image} alt={`${name}- Profile Foto`} />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>

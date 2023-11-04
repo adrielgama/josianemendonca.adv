@@ -104,7 +104,10 @@ export const Form = () => {
   return (
     <FormComponent {...form}>
       <Toaster />
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2 mt-6">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="mt-6 space-y-2 lg:w-96"
+      >
         <FormField
           control={form.control}
           name="name"
@@ -183,10 +186,10 @@ export const Form = () => {
         <div className="flex justify-end">
           <button
             type="submit"
-            className="bg-gradient-to-tr from-gold to-gold-gradient rounded-full text-center text-white px-2 text-xs mt-2 max-w-[170px] h-7 flex items-center justify-between"
+            className="mt-2 flex h-8 max-w-[170px] items-center justify-between rounded-full bg-gradient-to-r from-gold to-gold-gradient px-2 text-center text-xs text-white shadow"
           >
             <p className="pr-4">Enviar mensagem</p>
-            <div className="text-wine600 bg-white rounded-full">
+            <div className="rounded-full bg-white text-wine600">
               <RiArrowRightSLine size={20} />
             </div>
           </button>

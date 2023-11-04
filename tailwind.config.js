@@ -20,10 +20,6 @@ module.exports = {
       },
     },
     extend: {
-      backgroundImage: {
-        bgHome: 'url(/src/assets/background_home.jpg)',
-        logo: 'url(/src/assets/logo_short.png)',
-      },
       colors: {
         wine600: '#1E020D',
         wine400: '#3D051C',

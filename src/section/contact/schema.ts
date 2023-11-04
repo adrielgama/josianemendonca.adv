@@ -13,10 +13,11 @@ export const formSchema = z.object({
     .string({
       required_error: 'Informe um e-mail válido.',
     })
-    .regex(
-      /^(?=.{1,254}$)(?=.{1,64}@)[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+(.[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+)*@[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?(.[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?)*$/,
-      'Formato inválido'
-    ),
+    .email({ message: 'Formato inválido.' }),
+  // .regex(
+  //   /^(?=.{1,254}$)(?=.{1,64}@)[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+(.[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+)*@[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?(.[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?)*$/,
+  //   'Formato inválido'
+  // ),
   phone: z
     .string({
       required_error: 'Informe um telefone válido.',

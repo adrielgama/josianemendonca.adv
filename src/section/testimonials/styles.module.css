@@ -19,6 +19,7 @@
   background-image: url('@/assets/logo_short.png');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   opacity: 0.05;
   top: 0;
   left: 0;

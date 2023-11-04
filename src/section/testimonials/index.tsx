@@ -9,11 +9,11 @@ export const Testimonials = () => {
   return (
     <div
       id="testimonials"
-      className={`container p-4 bg-wine600 py-20 relative ${styles.containerWithBg}`}
+      className={`relative w-full bg-wine600 p-4 py-20 ${styles.containerWithBg} md:pt-28`}
     >
       <h1 className={styles.title}>Depoimentos</h1>
 
-      <div className="flex flex-col gap-4 mt-6 items-center">
+      <div className="mt-6 flex flex-col items-center gap-4 md:grid md:grid-cols-1 md:place-items-center lg:grid-cols-2 lg:justify-items-center xl:grid-cols-3 xl:justify-items-center">
         {TestimonialsMock.map(({ name, profilePhoto, testimonial }) => (
           <Box
             image={profilePhoto}
