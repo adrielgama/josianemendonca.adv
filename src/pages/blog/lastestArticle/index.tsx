@@ -9,13 +9,17 @@ export const LastestArticle: React.FC<LatestArticlesProps> = ({
   latestArticle,
 }) => {
   return (
-    <div className="relative h-screen bg-gradient-to-br from-white to-slate-200 pt-28">
+    <div className="relative h-full pb-16">
       <div className="container">
         {latestArticle && (
-          <div key={latestArticle.id} className="rounded shadow">
+          <div
+            key={latestArticle.id}
+            className="cursor-pointer rounded shadow transition-all hover:opacity-90 hover:shadow-md lg:max-w-2xl"
+          >
             <img
               src={latestArticle.imageUrl}
               alt={`Imagem do artigo ${latestArticle.title}`}
+              className="rounded-t"
             />
             <div className="space-y-3 p-4">
               <span className="text-xs text-gray-400">

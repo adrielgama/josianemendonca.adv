@@ -18,17 +18,21 @@ export const BlogPage = () => {
     refetchOnReconnect: false,
   })
 
-  const sortedArticles = articles?.sort(
+  const sortedByCreatedAt = articles?.sort(
     (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
   )
-
-  const latestArticle = sortedArticles?.[0]
+  const latestArticle = sortedByCreatedAt?.[0]
+  const sortedByViews = sortedByCreatedAt?.sort(
+    (a, b) => (b.views || 0) - (a.views || 0)
+  )
 
   return (
-    <main>
+    <main className="h-full bg-gradient-to-br from-white to-slate-200">
       <Navbar />
-      <LastestArticle latestArticle={latestArticle} />
-      <TopArticles />
+      <div className="container flex flex-col pt-32 lg:flex-row lg:pt-40">
+        <LastestArticle latestArticle={latestArticle} />
+        <TopArticles topArticles={sortedByViews} />
+      </div>
     </main>
   )
 }
