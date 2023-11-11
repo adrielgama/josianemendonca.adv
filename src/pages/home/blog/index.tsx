@@ -5,9 +5,9 @@ import { useQuery } from 'react-query'
 
 import { Button } from '@/components/ui/button'
 
-import { fetchArticles } from './api'
 import { CardBlog } from './card'
-import { IArticleItems } from './types'
+import { fetchArticles } from '../../../api/api'
+import { IArticleItems } from '../../../api/types'
 
 export const Blog: React.FC = () => {
   const {
@@ -48,18 +48,21 @@ export const Blog: React.FC = () => {
                     author={author?.name}
                     updatedAt={updatedAt}
                     imageUrl={imageUrl}
+                    id={id}
                   />
                 </Slide>
               </div>
             )
           )}
       </div>
-      <Button
-        variant="outline"
-        className="mt-8 hover:bg-wine400 hover:text-white"
-      >
-        Ver todos os artigos
-      </Button>
+      <a href="/blog">
+        <Button
+          variant="outline"
+          className="mt-8 hover:bg-wine400 hover:text-white"
+        >
+          Ver todos os artigos
+        </Button>
+      </a>
     </div>
   )
 }

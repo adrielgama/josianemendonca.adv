@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom/client'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import App from './App'
+import { HomePage, BlogPage, SingleArticle } from '@/routes'
 import './index.css'
 
 inject()
@@ -16,7 +16,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<App />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:id" element={<SingleArticle />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>

@@ -16,6 +16,7 @@ interface ICardProps {
   updatedAt: string
   imageUrl?: string
   author?: string
+  id: string
 }
 
 export const CardBlog: React.FC<ICardProps> = ({
@@ -25,6 +26,7 @@ export const CardBlog: React.FC<ICardProps> = ({
   author,
   updatedAt,
   imageUrl,
+  id,
 }) => {
   const cleanBody = stripHTML(body)
   const truncatedBody = truncateString(cleanBody, 100)
@@ -57,9 +59,11 @@ export const CardBlog: React.FC<ICardProps> = ({
       </div>
       <div className="mt-auto">
         <Separator className="bg-gold/30 px-4" />
-        <Button variant="link">
-          Leia mais <ChevronRight size={20} />
-        </Button>
+        <a href={`/blog/${id}`} target="_blank" rel="noopener noreferrer">
+          <Button variant="link">
+            Leia mais <ChevronRight size={20} />
+          </Button>
+        </a>
       </div>
     </div>
   )
