@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { ChevronRight } from 'lucide-react'
+import { useLocation } from 'react-router-dom'
 
 import AvatarImg from '@/assets/avatar.webp'
 import NoImage from '@/assets/no_image.webp'
@@ -28,6 +29,8 @@ export const CardBlog: React.FC<ICardProps> = ({
   imageUrl,
   id,
 }) => {
+  const location = useLocation()
+  const isInBlog = location.pathname.includes('/blog')
   const cleanBody = stripHTML(body)
   const truncatedBody = truncateString(cleanBody, 100)
 
@@ -59,7 +62,11 @@ export const CardBlog: React.FC<ICardProps> = ({
       </div>
       <div className="mt-auto">
         <Separator className="bg-gold/30 px-4" />
-        <a href={`/blog/${id}`} target="_blank" rel="noopener noreferrer">
+        <a
+          href={`/blog/${id}`}
+          target={isInBlog ? '_self' : '_blank'}
+          rel="noopener noreferrer"
+        >
           <Button variant="link">
             Leia mais <ChevronRight size={20} />
           </Button>

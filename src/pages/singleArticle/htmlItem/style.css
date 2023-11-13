@@ -1,0 +1,55 @@
+.custom-html-content {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.custom-html-content p {
+  margin: 0 0 1em;
+  font-size: 1em;
+}
+
+.custom-html-content h1, .custom-html-content h2 {
+  font-weight: bold;
+  margin: 1em 0 0.5em;
+}
+
+.custom-html-content h1 {
+  font-size: 2em;
+}
+
+.custom-html-content h2 {
+  font-size: 1.5em;
+}
+
+.custom-html-content ol, .custom-html-content ul {
+  padding-left: 20px;
+  margin: 2em 1em;
+}
+
+.custom-html-content ol li {
+  list-style-type: decimal;
+  margin: 0.5em 0;
+}
+
+.custom-html-content ul li {
+  list-style-type: disc;
+  margin: 0.5em 0;
+}
+
+.custom-html-content a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.custom-html-content blockquote {
+  border-left: 3px solid #ccc;
+  margin-left: 1.5rem;
+  padding-left: 1rem;
+}
+
+.custom-html-content strong {
+  font-weight: bold;
+}
+
+.custom-html-content em {
+  font-style: italic;
+}
