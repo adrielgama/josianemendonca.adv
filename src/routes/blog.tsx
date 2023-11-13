@@ -11,7 +11,7 @@ import { TopArticles } from '@/pages/blog/topArticles'
 export const BlogPage = () => {
   const {
     data: articles,
-    // isLoading,
+    isLoading,
     // error,
   } = useQuery<IArticleItems[]>('articles', fetchArticles, {
     staleTime: 1000 * 60 * 5,
@@ -38,7 +38,7 @@ export const BlogPage = () => {
       <div className="flex flex-col items-center">
         <Separator className="mb-10 max-w-sm bg-gold/20" />
       </div>
-      <Articles articles={articles} />
+      <Articles articles={articles} isLoading={isLoading} />
     </main>
   )
 }

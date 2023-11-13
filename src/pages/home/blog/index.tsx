@@ -3,6 +3,7 @@ import React from 'react'
 import { Slide } from 'react-awesome-reveal'
 import { useQuery } from 'react-query'
 
+import { CardSkeleton } from '@/components/Skeleton/CardSkeleton'
 import { Button } from '@/components/ui/button'
 
 import { CardBlog } from './card'
@@ -22,7 +23,7 @@ export const Blog: React.FC = () => {
   })
 
   if (isLoading) {
-    return <div>Carregando...</div>
+    return <CardSkeleton />
   }
 
   if (error) {
