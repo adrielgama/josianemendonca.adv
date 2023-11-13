@@ -2,6 +2,8 @@ import { useQuery } from 'react-query'
 
 import { fetchArticles } from '@/api/api'
 import { IArticleItems } from '@/api/types'
+import { Separator } from '@/components/ui/separator'
+import { Articles } from '@/pages/blog/articles'
 import { LastestArticle } from '@/pages/blog/lastestArticle'
 import { Navbar } from '@/pages/blog/navbar'
 import { TopArticles } from '@/pages/blog/topArticles'
@@ -33,6 +35,10 @@ export const BlogPage = () => {
         <LastestArticle latestArticle={latestArticle} />
         <TopArticles topArticles={sortedByViews} />
       </div>
+      <div className="flex flex-col items-center">
+        <Separator className="mb-10 max-w-sm bg-gold/20" />
+      </div>
+      <Articles articles={articles} />
     </main>
   )
 }
