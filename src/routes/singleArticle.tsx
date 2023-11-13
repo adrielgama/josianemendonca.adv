@@ -5,6 +5,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 
 import { fetchSingleArticles } from '@/api/api'
 import { IArticleItems } from '@/api/types'
+import { Toaster } from '@/components/ui/toaster'
 import { Navbar } from '@/pages/blog/navbar'
 import { SingleArticleItem } from '@/pages/singleArticle'
 
@@ -35,6 +36,7 @@ export const SingleArticle = () => {
       <div className="container flex flex-col pt-32 lg:flex-row lg:pt-40">
         {article && <SingleArticleItem article={article} />}
       </div>
+      <Toaster />
     </main>
   )
 }

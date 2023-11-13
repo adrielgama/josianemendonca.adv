@@ -10,7 +10,7 @@ export const CustomHtmlContent: React.FC<CustomHtmlContentProps> = ({
 }) => {
   return (
     <div
-      className="custom-html-content"
+      className="custom-html-content max-w-3xl"
       dangerouslySetInnerHTML={{ __html: htmlContent }}
     />
   )
