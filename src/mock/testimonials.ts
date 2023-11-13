@@ -1,24 +1,24 @@
-import AdrielProfilePhoto from '@/assets/clients/adriel.jpg'
-import JonProfilePhoto from '@/assets/clients/jon.jpg'
-import MaryProfilePhoto from '@/assets/clients/mary.jpg'
+import JoaoProfilePhoto from '@/assets/clients/joao.webp'
+import PedroProfilePhoto from '@/assets/clients/pedro.webp'
+import VanceliaProfilePhoto from '@/assets/clients/vancelia.webp'
 
 export const TestimonialsMock = [
   {
     name: 'João da Luz',
     testimonial:
       'O advogado demonstrou habilidades excepcionais ao resolver meu caso com eficiência e precisão, garantindo resultados favoráveis.',
-    profilePhoto: AdrielProfilePhoto,
+    profilePhoto: JoaoProfilePhoto,
   },
   {
     name: 'Pedro Santos',
     testimonial:
-      'Com dedicação e conhecimento, o advogado superou minhas expectativas, conquistando um desfecho favorável para meu caso.',
-    profilePhoto: JonProfilePhoto,
+      'Ele trabalhou com muita força no meu caso e me surpreendeu, porque conseguiu um final bom pra gente.',
+    profilePhoto: PedroProfilePhoto,
   },
   {
     name: 'Vancélia Silva',
     testimonial:
       'Gratidão ao advogado pela sua atuação brilhante, conduzindo meu caso com maestria e alcançando resultados extraordinários.',
-    profilePhoto: MaryProfilePhoto,
+    profilePhoto: VanceliaProfilePhoto,
   },
 ]

@@ -12,7 +12,7 @@ import { IArticleItems } from '../../../api/types'
 
 export const Blog: React.FC = () => {
   const {
-    data: articles,
+    data: articles = [],
     isLoading,
     error,
   } = useQuery<IArticleItems[]>('articles', fetchArticles, {
@@ -56,14 +56,18 @@ export const Blog: React.FC = () => {
             )
           )}
       </div>
-      <a href="/blog">
-        <Button
-          variant="outline"
-          className="mt-8 hover:bg-wine400 hover:text-white"
-        >
-          Ver todos os artigos
-        </Button>
-      </a>
+      {articles?.length !== 0 ? (
+        <a href="/blog">
+          <Button
+            variant="outline"
+            className="mt-8 hover:bg-wine400 hover:text-white"
+          >
+            Ver todos os artigos
+          </Button>
+        </a>
+      ) : (
+        <div>Ainda não temos nenhum artigo publicado!</div>
+      )}
     </div>
   )
 }
