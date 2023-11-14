@@ -33,7 +33,6 @@ export const Home = () => {
               src={PersonImage}
               alt="Person"
               className="hidden self-end object-cover md:block md:h-2/3 lg:h-3/4"
-              loading="lazy"
             />
           </div>
         </Slide>

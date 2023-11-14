@@ -9,9 +9,6 @@ module.exports = {
     './index.html',
   ],
   theme: {
-    fontFamily: {
-      sans: ['Montserrat', 'sans-serif'],
-    },
     container: {
       center: true,
       padding: '2rem',
@@ -20,6 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Montserrat', 'sans-serif'],
+      },
       colors: {
         wine600: '#1E020D',
         wine400: '#3D051C',
