@@ -8,6 +8,7 @@ import { IArticleItems } from '@/api/types'
 import { Toaster } from '@/components/ui/toaster'
 import { Navbar } from '@/pages/blog/navbar'
 import { SingleArticleItem } from '@/pages/singleArticle'
+import { Footer } from '@/shared/footer'
 
 export const SingleArticle = () => {
   const { id } = useParams()
@@ -37,6 +38,7 @@ export const SingleArticle = () => {
         {article && <SingleArticleItem article={article} />}
       </div>
       <Toaster />
+      <Footer />
     </main>
   )
 }

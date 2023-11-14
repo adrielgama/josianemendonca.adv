@@ -4,6 +4,7 @@ import { Home } from '@/pages/home/home'
 import { Navbar } from '@/pages/home/navbar'
 import { Purpose } from '@/pages/home/purpose'
 import { Testimonials } from '@/pages/home/testimonials'
+import { Footer } from '@/shared/footer'
 
 export const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ export const HomePage = () => {
       <Blog />
       <Testimonials />
       <Contact />
+      <Footer />
     </main>
   )
 }

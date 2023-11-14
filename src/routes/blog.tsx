@@ -7,6 +7,7 @@ import { Articles } from '@/pages/blog/articles'
 import { LastestArticle } from '@/pages/blog/lastestArticle'
 import { Navbar } from '@/pages/blog/navbar'
 import { TopArticles } from '@/pages/blog/topArticles'
+import { Footer } from '@/shared/footer'
 
 export const BlogPage = () => {
   const {
@@ -39,6 +40,7 @@ export const BlogPage = () => {
         <Separator className="mb-10 max-w-sm bg-gold/20" />
       </div>
       <Articles articles={articles} isLoading={isLoading} />
+      <Footer />
     </main>
   )
 }
