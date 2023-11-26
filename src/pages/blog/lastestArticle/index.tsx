@@ -19,7 +19,7 @@ export const LastestArticle: React.FC<LatestArticlesProps> = ({
             <img
               src={latestArticle.imageUrl}
               alt={`Imagem do artigo ${latestArticle.title}`}
-              className="rounded-t object-cover xl:max-h-[400px] xl:max-w-[640px]"
+              className="rounded-t object-cover xl:max-h-[400px] xl:w-full"
             />
             <div className="space-y-3 p-4">
               <span className="text-xs text-gray-400">
