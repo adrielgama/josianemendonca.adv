@@ -186,7 +186,7 @@ export const Form = () => {
         <div className="flex justify-end">
           <button
             type="submit"
-            className="mt-2 flex h-8 max-w-[170px] items-center justify-between rounded-full bg-gradient-to-r from-gold to-gold-gradient px-2 text-center text-xs text-white shadow"
+            className="mt-2 flex h-8 max-w-[170px] items-center justify-between rounded-md bg-gradient-to-r from-gold to-gold-gradient px-2 text-center text-xs text-white shadow transition-all hover:from-gold-gradient hover:to-gold"
           >
             <p className="pr-4">Enviar mensagem</p>
             <div className="rounded-full bg-white text-wine600">

@@ -1,11 +1,22 @@
 import React from 'react'
 
+import { cn } from '@/lib/utils'
+
 import { Button as BtnComponent } from '../ui/button'
 
-export const Button = () => {
+interface ButtonProps {
+  className?: string
+}
+
+export const Button: React.FC<ButtonProps> = ({ className }) => {
   return (
     <a href="#contact">
-      <BtnComponent className="mt-4 max-w-[170px] rounded-full bg-gradient-to-r from-wine400 to-wine600 p-4 text-center text-xs text-white">
+      <BtnComponent
+        className={cn(
+          'mt-4 max-w-[170px] bg-wine600 p-4 text-center text-xs text-white hover:bg-wine400',
+          className
+        )}
+      >
         Entrar em contato
       </BtnComponent>
     </a>

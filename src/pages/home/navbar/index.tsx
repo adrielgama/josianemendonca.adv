@@ -50,7 +50,7 @@ export const Navbar = () => {
         </div>
 
         <ul
-          className={`absolute left-0 z-[-1] w-full bg-wine600 pl-9 shadow-lg drop-shadow-lg transition-all duration-500 ease-in md:static md:z-auto md:flex md:w-auto md:items-center md:pb-0 md:pl-0 ${
+          className={`absolute left-0 z-[-1] w-full bg-wine600 pl-9 transition-all duration-500 ease-in md:static md:z-auto md:flex md:w-auto md:items-center md:pb-0 md:pl-0 ${
             open ? 'top-20 ' : 'top-[-490px]'
           }`}
         >
