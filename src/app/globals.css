@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-josiane-wine-100: #9f6177;
+  --color-josiane-wine-400: #3d051c;
+  --color-josiane-wine-600: #1e020d;
+  --color-josiane-gold-100: #d3dce6;
+  --color-josiane-gold-400: #b29557;
+  --color-josiane-gold-600: #967b41;
+}
