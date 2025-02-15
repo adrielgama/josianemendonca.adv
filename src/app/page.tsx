@@ -1,10 +1,16 @@
 import Header from './_components/header'
+import HeroSection from './_components/hero-section'
+import Purpose from './_components/purpose'
+import StatisticsSection from './_components/statistics-section'
 
 export default function Home() {
   return (
-    <div className="h-screen w-screen">
-      <main className="container mx-auto">
-        <Header />
+    <div className="font-inter h-full w-full">
+      <Header />
+      <main className="pt-28">
+        <HeroSection />
+        <Purpose />
+        <StatisticsSection />
       </main>
     </div>
   )
