@@ -96,7 +96,7 @@ export default async function BlogPostPage({
   return (
     <div className="font-inter flex min-h-screen w-full flex-col">
       <Header />
-      <main className="mt-6 flex-1 py-32">
+      <main className="mt-6 flex-1 px-3 pt-32 pb-8">
         <SingleArticle article={article} slug={params.slug} />
       </main>
       <footer className="bg-josiane-wine-400 w-full">

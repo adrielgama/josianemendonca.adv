@@ -35,7 +35,7 @@ export default function SingleArticle({ article, slug }: SingleArticleProps) {
           className="text-josiane-gold-400 hover:text-josiane-wine-400 flex items-center gap-1 text-sm transition-colors"
         >
           <ChevronLeft size={14} aria-hidden="true" />
-          Voltar ao Blog
+          Voltar
         </Link>
         <div className="flex gap-2">
           <Button
