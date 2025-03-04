@@ -1,0 +1,48 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-josiane-wine-100: #9f6177;
+  --color-josiane-wine-400: #3d051c;
+  --color-josiane-wine-600: #1e020d;
+  --color-josiane-wine-900: #0b0105;
+  --color-josiane-gold-100: #d3dce6;
+  --color-josiane-gold-400: #b29557;
+  --color-josiane-gold-600: #967b41;
+
+  --font-inter: 'Inter', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-neuton: 'Neuton', sans-serif;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Estiliza a barra de rolagem */
+::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 12px;
+}
+
+/* Estiliza o fundo da barra */
+::-webkit-scrollbar-track {
+  background: var(--color-josiane-gold-100);
+  border-radius: 10px;
+}
+
+/* Estiliza o "thumb" da barra (a parte que desliza) */
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-josiane-gold-400);
+  border-radius: 10px;
+}
+
+* {
+  scroll-behavior: smooth;
+}
