@@ -12,32 +12,13 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navLinks = [
-    { href: '/', id: '', label: 'Início' },
-    { href: '/blog', id: 'blog', label: 'Blog' },
+    { href: '/', label: 'Início' },
+    { href: '/blog', label: 'Blog' },
   ]
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
-
-  const handleSmoothScroll =
-    (id: string) => (e: { preventDefault: () => void }) => {
-      e.preventDefault()
-      if (id === '') {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth',
-        })
-      } else {
-        const element = document.getElementById(id)
-        if (element) {
-          element.scrollIntoView({
-            behavior: 'smooth',
-          })
-        }
-      }
-      setIsMenuOpen(false)
-    }
 
   return (
     <header className="bg-josiane-wine-400 fixed top-0 left-0 z-50 flex h-28 w-full items-center shadow-md">
@@ -59,7 +40,7 @@ export default function Header() {
           onClick={toggleMenu}
           size="icon"
           className="md:hidden"
-          aria-label="Open menu mobile"
+          aria-label="Abrir menu mobile"
         >
           <Menu className="text-josiane-gold-100 !size-8" />
         </Button>
@@ -67,11 +48,7 @@ export default function Header() {
         <nav className="hidden md:block">
           <ul className="text-josiane-gold-400 flex gap-6">
             {navLinks.map((link) => (
-              <NavLink
-                key={link.id}
-                href={link.href}
-                onClick={handleSmoothScroll(link.id)}
-              >
+              <NavLink key={link.href} href={link.href}>
                 {link.label}
               </NavLink>
             ))}
@@ -109,9 +86,9 @@ export default function Header() {
           <ul className="mt-12 flex flex-col gap-6 text-lg">
             {navLinks.map((link) => (
               <NavLink
-                key={link.id}
+                key={link.href}
                 href={link.href}
-                onClick={handleSmoothScroll(link.id)}
+                onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}
               </NavLink>
@@ -126,7 +103,7 @@ export default function Header() {
 interface NavLinkProps {
   href: string
   children: React.ReactNode
-  onClick: (e: { preventDefault: () => void }) => void
+  onClick?: (e: { preventDefault: () => void }) => void
   className?: string
 }
 

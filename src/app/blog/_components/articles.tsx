@@ -26,10 +26,8 @@ export default function Articles() {
   return (
     <div>
       <header className="py-12 text-center">
-        <h1 className="text-3xl font-bold md:text-4xl">
-          Blog da Josiane Mendonça
-        </h1>
-        <p className="mt-4 text-lg text-gray-600">
+        <h1 className="text-3xl font-bold md:text-4xl">Meus artigos</h1>
+        <p className="mt-2 text-sm text-gray-600">
           Artigos sobre Direito Trabalhista e atualizações jurídicas
         </p>
       </header>

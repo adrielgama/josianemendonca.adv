@@ -46,9 +46,9 @@ const formSchema = z.object({
 
 type ProfileFormValues = z.infer<typeof formSchema>
 
-const userId = process.env.VITE_USERID as string
-const serviceId = process.env.VITE_SERVICEID as string
-const templateId = process.env.VITE_TEMPLATEID as string
+const userId = process.env.NEXT_PUBLIC_USERID as string
+const serviceId = process.env.NEXT_PUBLIC_SERVICEID as string
+const templateId = process.env.NEXT_PUBLIC_TEMPLATEID as string
 
 export const Form = () => {
   const [phoneNumber, setPhoneNumber] = React.useState('')
