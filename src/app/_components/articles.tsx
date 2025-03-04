@@ -15,8 +15,8 @@ export default function Articles() {
   const { articles, setArticles } = useArticlesStore()
 
   useEffect(() => {
-    if (data?.articles) {
-      setArticles(data.articles)
+    if (data) {
+      setArticles(data)
     }
   }, [data, setArticles])
 
@@ -32,7 +32,7 @@ export default function Articles() {
     return <div className="py-8 text-center">Erro ao carregar artigos.</div>
   }
 
-  if (!data?.articles || data.articles.length === 0) {
+  if (!data || data.length === 0) {
     return <div className="py-8 text-center">Nenhum artigo encontrado.</div>
   }
 

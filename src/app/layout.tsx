@@ -84,14 +84,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" suppressHydrationWarning>
       <body
         className={`${montserrat.className} ${neuton.className} ${inter.className} antialiased`}
         data-theme="light"
       >
         <ReactQueryProvider>
           {children}
-          <Toaster richColors />
+          <Toaster richColors theme="light" />
         </ReactQueryProvider>
       </body>
     </html>

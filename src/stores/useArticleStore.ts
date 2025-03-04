@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 
-type Article = {
+export type Article = {
   id: string
   title: string
   description?: string
