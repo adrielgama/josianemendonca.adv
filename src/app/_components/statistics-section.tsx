@@ -1,4 +1,5 @@
 import { Separator } from '@/components/ui/separator'
+import { stat } from 'fs'
 
 export default function StatisticsSection() {
   const stats = [
@@ -12,21 +13,22 @@ export default function StatisticsSection() {
       className="relative bottom-12 px-4"
       aria-labelledby="statistics-heading"
     >
-      <div className="container mx-auto bg-zinc-100 px-4 py-6 shadow-lg">
+      <div className="container mx-auto bg-zinc-50 px-4 py-6 shadow-lg">
         <h2 className="sr-only">Estatísticas</h2>
         <div className="flex flex-col items-center justify-evenly gap-6 lg:flex-row">
-          {stats.map((stat, index) => (
-            <div key={stat.title} className="flex items-center gap-6">
-              <Stats value={stat.value} title={stat.title} />
-              {index < stats.length - 1 && (
-                <Separator
-                  orientation="vertical"
-                  className="hidden lg:block lg:!h-28"
-                  aria-hidden="true"
-                />
-              )}
-            </div>
-          ))}
+          <Stats value={stats[0].value} title={stats[0].title} />
+          <Separator
+            orientation="vertical"
+            className="hidden lg:block lg:!h-28"
+            aria-hidden="true"
+          />
+          <Stats value={stats[1].value} title={stats[1].title} />
+          <Separator
+            orientation="vertical"
+            className="hidden lg:block lg:!h-28"
+            aria-hidden="true"
+          />
+          <Stats value={stats[2].value} title={stats[2].title} />
         </div>
       </div>
     </section>
@@ -37,7 +39,7 @@ const Stats = ({ value, title }: { value: string; title: string }) => {
   return (
     <div
       aria-labelledby={`stat-${title.replace(/\s+/g, '-')}`}
-      className="font-montserrat text-josiane-wine-400 flex flex-col items-center justify-center text-center"
+      className="font-montserrat text-josiane-wine-600 flex flex-col items-center justify-center text-center"
     >
       <span
         id={`stat-${title.replace(/\s+/g, '-')}`}
@@ -45,7 +47,9 @@ const Stats = ({ value, title }: { value: string; title: string }) => {
       >
         {value}
       </span>
-      <span className="text-xs lg:text-base">{title}</span>
+      <span className="text-josiane-wine-400 text-xs lg:text-base">
+        {title}
+      </span>
     </div>
   )
 }

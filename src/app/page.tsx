@@ -1,3 +1,4 @@
+import Articles from './_components/articles'
 import Header from './_components/header'
 import HeroSection from './_components/hero-section'
 import Purpose from './_components/purpose'
@@ -11,6 +12,7 @@ export default function Home() {
         <HeroSection />
         <Purpose />
         <StatisticsSection />
+        <Articles />
       </main>
     </div>
   )

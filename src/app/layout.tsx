@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, Montserrat, Neuton } from 'next/font/google'
 import './globals.css'
+import ReactQueryProvider from '@/providers/ReactQueryProvider'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -31,7 +32,7 @@ export default function RootLayout({
         className={`${montserrat.className} ${neuton.className} ${inter.className} antialiased`}
         data-theme="light"
       >
-        {children}
+        <ReactQueryProvider>{children}</ReactQueryProvider>
       </body>
     </html>
   )
