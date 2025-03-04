@@ -1,32 +1,7 @@
+import { fetchArticles } from '@/lib/api'
+import { Article } from '@/stores/useArticleStore'
+
 import type { MetadataRoute } from 'next'
-
-const API_URL = process.env.NEXT_PUBLIC_BLAG_URL
-const USER_ID = process.env.NEXT_PUBLIC_BLAG_USER_ID
-
-async function fetchArticles() {
-  const response = await fetch(`${API_URL}/users/${USER_ID}/articles`)
-  if (!response.ok) throw new Error('Erro ao buscar artigos')
-  return response.json()
-}
-
-// Tipagem dos artigos (copiada do seu código)
-type Article = {
-  id: string
-  title: string
-  description?: string
-  body: string
-  published: boolean
-  createdAt: string
-  updatedAt: string
-  authorId?: string
-  imageUrl?: string
-  views?: number
-  author?: {
-    id: string
-    name: string
-    email: string
-  }
-}
 
 const BASE_URL = 'https://www.josianemendonca.adv.br'
 
