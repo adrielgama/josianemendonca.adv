@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 export default function HeroSection() {
   return (
@@ -18,8 +19,8 @@ export default function HeroSection() {
             Trabalhista, Civil, de Família, do Consumidor e muito mais. Conte
             com uma assessoria experiente e comprometida com a sua causa.
           </p>
-          <Button variant="josiane" size="xl" className="max-w-fit">
-            Entre em contato
+          <Button asChild variant="josiane" size="xl" className="max-w-fit">
+            <Link href="#contact">Entre em contato</Link>
           </Button>
         </div>
       </div>
