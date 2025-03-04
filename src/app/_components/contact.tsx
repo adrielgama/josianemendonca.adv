@@ -1,4 +1,7 @@
 import React from 'react'
+
+import Image from 'next/image'
+
 import { Form } from './contact-form'
 
 export default function Contact() {
@@ -61,7 +64,7 @@ const OpeningHours = () => {
               (74) 9 8102-0822
             </a>
           </div>
-          <img src="/images/QR_code.svg" alt="QR Code whatsapp" />
+          <Image src="/images/QR_code.svg" alt="QR Code whatsapp" />
         </div>
       </div>
     </div>

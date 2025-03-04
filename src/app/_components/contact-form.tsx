@@ -3,8 +3,12 @@ import React from 'react'
 
 import emailjs from '@emailjs/browser'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { ChevronRight } from 'lucide-react'
 import { useForm } from 'react-hook-form'
+import { toast } from 'sonner'
+import * as z from 'zod'
 
+import { Button } from '@/components/ui/button'
 import {
   Form as FormComponent,
   FormControl,
@@ -15,11 +19,6 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-
-import * as z from 'zod'
-import { toast } from 'sonner'
-import { ChevronRight } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 
 export const formSchema = z.object({
   name: z

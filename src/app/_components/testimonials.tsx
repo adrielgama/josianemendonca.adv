@@ -1,6 +1,7 @@
 'use client'
 
 import { Quote } from 'lucide-react'
+
 import { Avatar, AvatarImage } from '@/components/ui/avatar'
 
 type Testimonial = {

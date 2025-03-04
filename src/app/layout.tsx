@@ -1,7 +1,11 @@
-import type { Metadata } from 'next'
 import { Inter, Montserrat, Neuton } from 'next/font/google'
-import './globals.css'
+
+import { Toaster } from '@/components/ui/sonner'
 import ReactQueryProvider from '@/providers/ReactQueryProvider'
+
+import type { Metadata } from 'next'
+
+import './globals.css'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -85,7 +89,10 @@ export default function RootLayout({
         className={`${montserrat.className} ${neuton.className} ${inter.className} antialiased`}
         data-theme="light"
       >
-        <ReactQueryProvider>{children}</ReactQueryProvider>
+        <ReactQueryProvider>
+          {children}
+          <Toaster richColors />
+        </ReactQueryProvider>
       </body>
     </html>
   )

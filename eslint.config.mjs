@@ -10,23 +10,14 @@ const compat = new FlatCompat({
 })
 
 const eslintConfig = [
-  ...compat.extends(
-    '@rocketseat/eslint-config/next',
-    'next/core-web-vitals',
-    'next/typescript',
-    'prettier'
-  ),
-  {
+  ...compat.config({
+    extends: ['prettier', 'next/typescript', 'next/core-web-vitals'],
+    plugins: ['prettier'],
     rules: {
-      'prettier/prettier': [
-        'error',
-        {
-          endOfLine: 'auto',
-        },
-      ],
-      camelCase: 'off',
+      'react/display-name': 'off',
+      '@typescript-eslint/no-empty-object-type': 'off',
       'import/order': [
-        'warn',
+        'error',
         {
           groups: [
             ['builtin', 'external'],
@@ -55,8 +46,15 @@ const eslintConfig = [
           },
         },
       ],
+      camelCase: 'off',
+      'prettier/prettier': [
+        'error',
+        {
+          endOfLine: 'auto',
+        },
+      ],
     },
-  },
+  }),
 ]
 
 export default eslintConfig

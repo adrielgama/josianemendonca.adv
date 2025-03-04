@@ -1,5 +1,4 @@
 import { Separator } from '@/components/ui/separator'
-import { stat } from 'fs'
 
 export default function StatisticsSection() {
   const stats = [

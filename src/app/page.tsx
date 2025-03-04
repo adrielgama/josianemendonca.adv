@@ -1,4 +1,5 @@
 import Link from 'next/link'
+
 import Articles from './_components/articles'
 import Contact from './_components/contact'
 import Header from './_components/header'

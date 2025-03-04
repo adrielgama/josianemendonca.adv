@@ -1,12 +1,14 @@
 'use client'
+import { useEffect } from 'react'
+
+import { ArrowRight, Calendar } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+
 import { Button } from '@/components/ui/button'
 import { useArticlesQuery } from '@/hooks/useArticlesQuery'
 import { formatDate } from '@/lib/format'
 import { useArticlesStore } from '@/stores/useArticleStore'
-import { ArrowRight, Calendar } from 'lucide-react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { useEffect } from 'react'
 
 export default function Articles() {
   const { data, isLoading, isError } = useArticlesQuery()
