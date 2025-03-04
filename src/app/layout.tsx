@@ -1,5 +1,5 @@
-import { Inter, Montserrat, Neuton } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { Inter, Montserrat, Neuton } from 'next/font/google'
 
 import { Toaster } from '@/components/ui/sonner'
 import ReactQueryProvider from '@/providers/ReactQueryProvider'
