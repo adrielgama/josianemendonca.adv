@@ -17,10 +17,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }): Promise<Metadata> {
+  const { slug } = await params
   const articles = await fetchArticles()
-  const article = articles.find((a: { id: string }) => a.id === params.slug)
+  const article = articles.find((a: { id: string }) => a.id === slug)
 
   if (!article || !article.published) {
     return {
@@ -42,7 +43,7 @@ export async function generateMetadata({
     openGraph: {
       title: article.title,
       description: article.description || article.body.slice(0, 160),
-      url: `https://www.josianemendonca.adv.br/blog/${params.slug}`,
+      url: `https://www.josianemendonca.adv.br/blog/${slug}`,
       images: article.imageUrl
         ? [
             {
@@ -78,10 +79,11 @@ export async function generateMetadata({
 export default async function BlogPostPage({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }) {
+  const { slug } = await params
   const articles = await fetchArticles()
-  const article = articles.find((a: { id: string }) => a.id === params.slug)
+  const article = articles.find((a: { id: string }) => a.id === slug)
 
   if (!article || !article.published) {
     return (
@@ -97,7 +99,7 @@ export default async function BlogPostPage({
     <div className="font-inter flex min-h-screen w-full flex-col">
       <Header />
       <main className="mt-6 flex-1 px-3 pt-32 pb-8">
-        <SingleArticle article={article} slug={params.slug} />
+        <SingleArticle article={article} slug={slug} />
       </main>
       <footer className="bg-josiane-wine-400 w-full">
         <Footer />
