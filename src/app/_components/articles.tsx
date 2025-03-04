@@ -64,7 +64,7 @@ export default function Articles() {
                   {featuredPost.description}
                 </p>
                 <div className="mb-4 flex items-center text-sm text-slate-400">
-                  <span className="mr-2 font-medium">
+                  <span className="font-medium">
                     {featuredPost.author?.name}
                   </span>
                   <span className="mx-2">·</span>
