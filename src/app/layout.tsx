@@ -1,4 +1,5 @@
 import { Inter, Montserrat, Neuton } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 
 import { Toaster } from '@/components/ui/sonner'
 import ReactQueryProvider from '@/providers/ReactQueryProvider'
@@ -92,6 +93,7 @@ export default function RootLayout({
         <ReactQueryProvider>
           {children}
           <Toaster richColors theme="light" />
+          <Analytics />
         </ReactQueryProvider>
       </body>
     </html>
