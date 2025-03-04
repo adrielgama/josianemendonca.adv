@@ -64,7 +64,12 @@ const OpeningHours = () => {
               (74) 9 8102-0822
             </a>
           </div>
-          <Image src="/images/QR_code.svg" alt="QR Code whatsapp" />
+          <Image
+            src="/images/QR_code.svg"
+            alt="QR Code whatsapp"
+            width={100}
+            height={100}
+          />
         </div>
       </div>
     </div>

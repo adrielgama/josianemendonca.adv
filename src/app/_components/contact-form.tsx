@@ -20,7 +20,7 @@ import {
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 
-export const formSchema = z.object({
+const formSchema = z.object({
   name: z
     .string()
     .min(2, {
@@ -44,7 +44,7 @@ export const formSchema = z.object({
   message: z.string().max(200).optional(),
 })
 
-export type ProfileFormValues = z.infer<typeof formSchema>
+type ProfileFormValues = z.infer<typeof formSchema>
 
 const userId = process.env.VITE_USERID as string
 const serviceId = process.env.VITE_SERVICEID as string
