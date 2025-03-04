@@ -36,7 +36,7 @@ export default function Articles() {
 
   return (
     <section
-      className="mt-20 scroll-my-20 px-3"
+      className="mt-20 scroll-my-26 px-3"
       id="blog"
       aria-labelledby="articles-heading"
     >
