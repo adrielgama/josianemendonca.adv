@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Inter, Montserrat, Neuton } from 'next/font/google'
 
 import { Toaster } from '@/components/ui/sonner'
@@ -94,6 +95,7 @@ export default function RootLayout({
           {children}
           <Toaster richColors theme="light" />
           <Analytics />
+          <SpeedInsights />
         </ReactQueryProvider>
       </body>
     </html>
