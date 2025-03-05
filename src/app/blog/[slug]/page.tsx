@@ -40,6 +40,9 @@ export async function generateMetadata({
       'josiane mendonça',
       article.title.toLowerCase(),
     ],
+    alternates: {
+      canonical: `https://www.josianemendonca.adv.br/blog/${slug}`,
+    },
     openGraph: {
       title: article.title,
       description: article.description || article.body.slice(0, 160),
